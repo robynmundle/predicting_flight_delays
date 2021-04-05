@@ -46,6 +46,7 @@ def save_data(json_, apt_code, date):
         json.dump(json_, f)
         
 def get_save(apt_code, date, api_key):
+    global status_code
     data, status_code = get_data(apt_code, date, api_key)
 
     if status_code != 200:
